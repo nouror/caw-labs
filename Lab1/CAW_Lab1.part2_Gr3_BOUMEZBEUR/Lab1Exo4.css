@@ -1,0 +1,39 @@
+/*3*/
+*{
+    margin: 50px;
+    background-color: #e8eae8;
+    color: #5d665b;
+}
+
+/*4*/
+body{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 120px;
+    margin-right: 50px;
+    /*5*/
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    /*6*/
+    font-size: small;
+    line-height: 180%;
+}
+
+/*7*/
+h2:nth-of-type(1) {
+    font-size: 75%;
+}
+p:nth-of-type(1) {
+    font-size: 70%;
+}
+p:nth-of-type(2) {
+    text-indent: 3em;
+}
+
+/*8*/
+h1{
+    color: #ffffdd;
+}
+h2{
+    color: #966b72;
+    font-family: Georgia;
+}

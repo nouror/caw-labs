@@ -1,0 +1,94 @@
+/*1 Universal and Type Selectors */
+/* 1.1 Universal Selector with font-family and line-height*/
+*{
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+/* 1.2 Type Selector with the background-color*/
+body{
+    background-color: #f4f4f4;
+}
+/* 1.3 Centering all h1 and h2 and give them the dark blue color*/
+h1,h2{
+    text-align: center;
+    color: #336699;
+}
+/* 1.4 Improve readability for all paragraphs*/
+p{
+   margin-bottom: 1em; 
+}
+
+/*2 Class and ID Selectors*/
+/*2.1 Class Selector for the container*/
+#special{
+    background-color: #fffacd;
+    padding: 10px;
+}
+/*2.2 ID Selector for the highlighted text*/
+.hello{
+    color: #28a745;
+    font-weight: bold;
+}
+
+/*3 Descendant and Child Selectors*/
+/*3.1 > selector for the direct children h2 of div.main-content and div.ai-tools*/
+div.main-content > h2, div.ai-tools > h2{
+    text-transform: uppercase;
+}
+/*3.2 Descendant selector for the li inside div.ai-tools*/
+div.ai-tools li{
+   list-style-type: square; 
+}
+/*3.3 Descendant selector for the ul inside div.ai-tools*/
+div.ai-tools ul{
+    padding-left: 20px;
+}
+
+/*4 Attribute Selectors*/
+/*4.1 The style of input type text*/
+input[type="text"]{
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+/*4.2 The style of input type submit*/
+input[type="submit"]{
+    background-color: #007bff;
+    color: white;
+}
+
+/*5 Pseudo-classes and Pseudo-elements*/
+/*5.1 Change "a" color*/
+a{
+    color: #007bff;
+}
+/*5.2 Style of hover "a"*/
+a:hover{
+    text-decoration: none;
+    color: #032850;
+}
+/*5.3 Style of the visited "a"*/
+a:visited{
+    color: #6c757d;
+}
+/*5.4 The purpose of the :focus pseudo-class is to select and style the element that gets focus*/
+/*5.5 Style all the inputs when they are in the :focus state */
+input:focus {
+  border: 2px solid blue;
+}
+
+/*6 Combining Selectors & Specificity Challenge*/
+/*6.1 Style the <li> elements that are descendants of div.ai-tools and have the class hello*/
+div.ai-tools li.hello {
+  font-style: italic;
+}
+/*6.2*/
+/* the question said h1 but there no h1 in the footer so i go with h2*/
+/* Style h2 inside footer*/
+footer h2{
+    font-size: 1.2em;
+}
+/* Style h2*/
+h2{
+    font-size: 2em;
+}
