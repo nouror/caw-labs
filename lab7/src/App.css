@@ -4,12 +4,10 @@
   box-sizing: border-box;
 }
 body {
-  font-family: sans-serif;
   background-color: #ffffe3;
   color: black;
   display: flex;
   flex-direction: column;
-  align-items: center;      
   justify-content: flex-start;
   min-height: 100vh;
   width: 100%;
@@ -30,17 +28,48 @@ p {
   margin: 10px 0;
   font-size: 15px;
 }
-h2 {
+h2{
+  display: flex;
+  justify-content: center;
+  text-align: center;
   cursor: pointer;
-  font-weight: bold;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+h3 {
+  padding: 0px 10px;
+  font-size: 20px;
+  border-radius: 100px;
+  background-color: white;
+  margin-right: 10px;
+  font-weight: 900;
+
+}
+
+.col-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-count {
+  padding: 0px 10px;
+  font-size: 20px;
+  border-radius: 100px;
+  background-color: white;
+  margin-right: 10px;
+  font-weight: 900;
 }
 
 .input_text {
   display: block;
 }
 
-/* Only large screens */
-@media (min-width: 1024px) {
+@media (min-width: 1048px) {
   .input_text {
     display: flex;
     justify-content: center;
@@ -58,6 +87,7 @@ h2 {
   transition: all 0.3s;
   font-weight: bold;
   font-size: 13px;
+  box-sizing: border-box;
 
 }
 .form:hover{
@@ -71,6 +101,7 @@ h2 {
   color: white;
   border: 2px solid black;
   transition: background-color 0.3s;
+  box-sizing: border-box;
 }
 .options {
   padding: 10px 17px;
@@ -84,6 +115,7 @@ h2 {
   transition: background-color 0.3s;
   font-weight: 600;
     font-size: 14px;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .options:hover {
@@ -121,28 +153,77 @@ background-color: #333;
   }
 
 .btn_x{
-  padding: 5px 15px;
+  padding: 6px 10px;
   margin: 5px;
   border: none;
   border-radius: 20px;
-    color: #333;
-
+    color: #85858598;
+  background-color: white;
   cursor: pointer;
   transition: background-color 0.3s;
   font-weight: 600;
     font-size: 14px;
 }
 .btn_x:hover{
-    background-color: #d40606;
-        color: #ffffe3;
+        color: #ff1717;
+}
+.btn_x:focus{
+  outline: none;
+}
+
+.btn_x2{
+  padding: 7px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+    background-color: #333;
+    color: #ffffe3;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+    font-size: 14px;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 10px;
 
 }
+.btn_x2:hover{
+        color:#ffffe3 ;
+  background-color: #ff1717;
+}
+.btn_x2:focus{
+  outline: none;
+}
+
+.btn_m{
+  padding: 6px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+    color: #85858598;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+    font-size: 14px;
+
+}
+.btn_m:hover{
+        color: black;
+
+}
+.btn_m:focus{
+  outline: none;
+}
+
+
+
 
 .dlt{
   display: flex;
   gap: 20px;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 .dlt2{
   display: flex;
@@ -156,6 +237,7 @@ background-color: #333;
   border: white solid 2px;
   overflow-y: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 .dlt2:hover{
   border: #333 solid 2px;
@@ -169,7 +251,9 @@ background-color: #333;
   display: flex;
   justify-content: center;
   text-align: center;
+  padding-left: 230px;
 }
+
 .col{
   background-color: #f0e6b6;
   padding: 20px 25px;
@@ -180,4 +264,119 @@ background-color: #333;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  text-align: center;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+text-align: left;
+
+}
+
+.popup {
+  background: #ffffe3;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  
+}
+textarea.form {
+  min-height: 80px;
+  max-height: 120px;
+  
+}
+
+.lab{
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+.progress-box {
+  position: fixed;
+  left: 30px;
+  top: 207px;
+  background: #ffffe3;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  gap: 20px;
+  height: 370px;
+  width: 220px;
+
+}
+
+
+.progress-box p{
+  font-size: 15px;
+  font-weight: 500;
+    text-align: left;
+    padding-left: 10px;
+
+  
+}
+
+
+.progress-circle {
+  width: 145px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background: #ddd;
+  color: white;
+  font-size: 35px;
+   
+}
+
+
+.progress-details {
+  display: flex;
+  gap: 15px;
+}
+
+@media (max-width: 1048px) {
+  .progress-box {
+  position: relative;
+  top: 0px;
+  left: 0;
+  margin: 20px auto 10px auto;
+  height: 200px;
+  width: 400px;
+    flex-direction: row;
+    align-items: center;
+
+    
+ 
+}
+.container{
+  top: 0px;
+  padding-left: 0px;
+  margin: 20px auto 10px auto;
+}
+
+
+
+}
 
