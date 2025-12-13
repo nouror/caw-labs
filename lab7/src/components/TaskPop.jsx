@@ -11,19 +11,16 @@ function TaskPop({ task, onClose, updateTask }) {
 
     if (!task) return null;
 
-    // Add a new subtask
     function addSubtask() {
       setSubtasks([...subtasks, '']);
     }
 
-    // Update a subtask text
     function updateSubtask(index, value) {
       const newSubs = [...subtasks];
       newSubs[index] = value;
       setSubtasks(newSubs);
     }
 
-    // Toggle subtask done (optional, you can add later)
     function toggleSubtaskDone(index) {
       const newSubs = [...subtasks];
       if (typeof newSubs[index] === 'string') newSubs[index] = { title: newSubs[index], done: false };
@@ -31,7 +28,6 @@ function TaskPop({ task, onClose, updateTask }) {
       setSubtasks(newSubs);
     }
 
-    // Save changes
     function handleSave() {
       updateTask({
         ...task,

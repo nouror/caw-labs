@@ -65,9 +65,6 @@ function App() {
   }
 
   function updateTask(arg1, arg2, arg3) {
-  // support two forms:
-  // 1) updateTask(taskObject)  -> replace/merge whole task (used by TaskPop)
-  // 2) updateTask(taskId, field, value) -> update single field (existing usage)
   if (typeof arg1 === 'object' && arg1 !== null) {
     const updatedTask = arg1;
     setAllTasks(prev => prev.map(t => t.id === updatedTask.id ? { ...t, ...updatedTask } : t));
