@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  background-color: rgba(245, 245, 255, 0.9);
+  border-bottom: 1px solid #c5d2ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #3a6bc9;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 0;
+  border-bottom: #3a6bc9 6px solid;
+}
+
+
+
+nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+nav a {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4a5568;
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+nav a:hover {
+  color: #3a6bc9;
+  transform: translateY(-2px);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3a6bc9;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:active {
+  transform: translateY(0);
+  
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  nav {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .header h1::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem;
+  }
+
+  nav {
+    gap: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+}
